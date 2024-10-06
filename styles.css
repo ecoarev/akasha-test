@@ -1,0 +1,796 @@
+/* Ներմուծում ենք տեղական ֆոնտը */
+@font-face {
+    font-family: 'NotoSerifArmenian';
+    src: url('fonts/NotoSerifArmenian_ExtraCondensed-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
+}
+
+/* Հիմնական ոճավորում */
+body {
+    font-family: 'NotoSerifArmenian', serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #f8f8f8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Մենյուն աջ մասում է, լոգոն՝ ձախ */
+    align-items: center;
+    padding: 20px;
+    background-color: #0a2a5075;
+    color: white;
+    position: relative;
+}
+
+/* Լոգոյի ոճավորում */
+header .logo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.logo a {
+    text-decoration: none; /* Հեռացնում է underline-ը */
+}
+
+.logo img {
+    width: 5vw; /* Լոգոյի լայնությունը՝ 8% viewport-ի լայնությունից */
+    height: auto;
+}
+
+
+/* Հիմնական մենյուի ոճավորում */
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Մենյուն տեղափոխվում է աջ մաս */
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+    margin-left: 0px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: #0a2a5075;
+    color: #333;
+}
+
+/* Dropdown ենթաբաժինների ոճավորում */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0a2a5075;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 13px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Dropdown ցուցադրվում է hover-ով */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown-ի կարգավորում */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Համբուրգեր մենյուի տեսքը */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px;
+    border-radius: 5px;
+}
+
+/* Մոբիլ տարբերակի համար */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-active {
+        display: block;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+    }
+}
+
+
+/* Որոնման դաշտի ոճավորում */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2); /* Թափանցիկություն */
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 20px;
+    border: 1px solid white; /* Սպիտակ եզրագիծ */
+}
+
+.search-box input {
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent; /* Թափանցիկություն */
+    color: white; /* Սպիտակ տառեր */
+    width: 150px; /* Կարգավորեք ըստ անհրաժեշտության */
+}
+
+.search-box input::placeholder {
+    color: white; /* Placeholder-ի տառերը սպիտակ */
+}
+
+.search-box button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-box button img {
+    height: 20px;
+    width: 20px;
+    filter: invert(1); /* Արծաթագույն/սպիտակ պատկեր որոնման համար */
+}
+
+/* Համբուրգեր կոճակ */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px;
+    border-radius: 5px;
+}
+
+/* #home բաժնի ոճավորում */
+#home {
+    background-size: cover; /* Հարմարեցնում է ֆոնային նկարը */
+    background-position: center;
+    background-attachment: fixed; /* Ֆոնը կցված է */
+    padding: 100px 0;
+    text-align: center;
+    margin: 3% 3%; /* Աջ և ձախ կողմից 3% հեռավորություն */
+    border-radius: 15px; /* Անկյունների կլորացում */
+    color: white;
+}
+
+
+/* Տեքստերի և վերնագրի ոճավորում առանձին կապույտ ֆոնով */
+#home .content {
+    background-color: #0a2a50d1; /* Կապույտ ֆոն՝ թափանցիկություն */
+    padding: 20px;
+    margin: 0 15%; /* Աջ և ձախ 20% հեռավորություն */
+    border-radius: 15px; /* Անկյունների կլորացում */
+}
+
+#home h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 20px;
+}
+
+/* Նորությունների բաժին */
+#news {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#news h2 {
+    font-size: 30px;
+    color: #333;
+}
+
+#news p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Մոբիլ տարբերակի համար */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: #333;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Մենյուն թաքնված է */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-active {
+        display: flex; /* Երբ ակտիվ է՝ մենյուն ցուցադրվում է */
+    }
+
+    /* Մոբիլ տարբերակ լոգոյի համար */
+    header .logo img {
+        width: 15vw; /* Լոգոյի չափը փոքր սարքերի համար */
+    }
+
+    /* Որոնման դաշտի համար մոբիլ ոճ */
+    .search-box {
+        top: 10px;
+        right: 10px;
+        width: 80%;
+        justify-content: flex-end;
+    }
+
+    .search-box input {
+        width: 80%;
+    }
+
+    /* Մոբիլ տարբերակ #home բաժնի համար */
+    #home {
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .logo img {
+        width: 20vw; /* Լոգոյի չափը շատ փոքր սարքերի համար */
+    }
+	
+}
+
+/* Footer-ի հիմնական ոճավորում */
+footer {
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.4) 100%);
+    padding: 40px 20px;
+    color: #333;
+    font-size: 16px;
+    position: relative;
+}
+
+/* Footer վերին տեքստային հատված */
+.footer-text {
+    background-color: white; /* Սպիտակ ֆոն */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%; /* Լրիվ լայնություն */
+}
+
+.footer-text h2 {
+    margin: 0;
+    color: #333; /* Գույնը՝ #333 */
+}
+
+/* Footer վերին բաժին */
+
+.footer-top {
+    display: flex;
+    justify-content: space-between; /* Տեղադրում է div-երը հավասարաչափ */
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.footer-menu, .footer-center, .footer-subscribe {
+    width: 30%; /* Յուրաքանչյուրի լայնությունը 30% */
+}
+
+/* Footer-menu-ի ոճավորում */
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Տեքստի դիրքը ձախ */
+}
+
+.footer-menu ul li {
+    margin-bottom: 10px;
+}
+
+.footer-menu ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer-center-ի համար */
+.footer-center {
+    text-align: center; /* Տեքստի դիրքը կենտրոնում */
+}
+
+/* Footer-subscribe-ի համար */
+.footer-subscribe {
+    text-align: right; /* Տեքստի դիրքը աջ */
+}
+
+.footer-subscribe img {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Ուղիղ գիծ */
+footer hr {
+    border: none;
+    border-top: 4px solid #03254b;
+    margin: 20px 0px;
+}
+
+/* Footer ներքևի բաժին */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.footer-logo img {
+    width: 80px;
+    height: auto;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+/* Մոբիլ տարբերակի համար */
+@media screen and (max-width: 768px) {
+    .footer-top {
+        align-items: center;
+    }
+
+    .footer-menu {
+        margin-top: 20px;
+    }
+
+    .footer-subscribe {
+        margin-top: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-contact {
+        text-align: left;
+        margin-top: 20px;
+    }
+}
+
+/* #home2 բաժնի ոճավորում */
+#home2 {
+    background-color: #ffffff17;
+    margin: 0 3%;
+    padding: 40px 20px;
+    border-radius: 15px;
+}
+
+/* Վերնագիրը վերևում */
+#home2 h2 {
+    text-align: center;
+    margin-bottom: 30px;
+	font-size: 36px;
+	color: white;
+}
+
+/* Հավասար լայնություններով div-ներ */
+#home2 .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#home2 .divleft h2,
+#home2 .divcenter h2,
+#home2 .divright h2 {
+	margin: 20px;
+	color: black;
+    font-size: 25px;
+}
+#home2 .divleft p,
+#home2 .divcenter p,
+#home2 .divright p {
+	margin: 20px;
+	color: black;
+    font-size: 20px;
+}
+
+/* Յուրաքանչյուր div-ի ֆոն */
+#home2 .divleft,
+#home2 .divcenter,
+#home2 .divright {
+    flex: 1;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Նկարների կոնտեյներ որպես ֆոն */
+#home2 .divleft .image-container {
+    width: 100%;
+    height: 310px;
+    background-image: url('images/devleft.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px;
+	margin: 0px;
+}
+
+#home2 .divcenter .image-container {
+    width: 100%;
+    height: 280px;
+    background-image: url('images/divcente.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px;
+	margin: 0px;
+}
+
+#home2 .divright .image-container {
+    width: 100%;
+    height: 347px;
+    background-image: url('images/divrigh.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px;
+	margin: 0px;
+}
+
+/* Մոբիլ տարբերակի համար */
+@media screen and (max-width: 768px) {
+    #home2 .content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* #home3 բաժնի ոճավորում */
+#home3 {
+    background-image: url('images/bg-section-1.webp'); /* Ֆոնային նկար */
+    background-size: cover; /* Հարմարեցնում է ֆոնային նկարը */
+    background-position: center;
+    background-attachment: fixed; /* Ֆոնը կցված է */
+    margin: 20px 3%; /* Աջ և ձախ 3% հեռավորություն */
+    padding: 40px 20px;
+    border-radius: 15px; /* Անկյունների կլորացում */
+    text-align: center; /* Տեքստի կենտրոնացում */
+}
+
+/* Վերնագիր #home3-ի համար */
+#home3 h2 {
+    font-size: 36px; /* Վերնագրի տառաչափ */
+    color: white; /* Վերնագրի գույնը սև */
+    margin-bottom: 20px;
+}
+
+/* Պարբերություն #home3-ի համար */
+#home3 p {
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+}
+
+/* Content div-ի ոճավորում */
+#home3 .content {
+    background-color: rgba(10, 42, 80, 0.75); /* Թափանցիկ կապույտ ֆոն */
+    padding: 20px;
+    border-radius: 15px; /* Կլորացված անկյուններ */
+    color: white; /* Սպիտակ տեքստ */
+    margin: 25px 15%;
+}
+/* #homeend բաժնի ոճավորում */
+#homeend {
+    background-color: rgba(10, 42, 80, 0.75); /* Ֆոնային նկար */
+    background-size: cover; /* Հարմարեցնում է ֆոնային նկարը */
+    background-position: center;
+    background-attachment: fixed; /* Ֆոնը կցված է */
+    margin: 20px 3%; /* Աջ և ձախ 3% հեռավորություն */
+    padding: 40px 20px;
+    border-radius: 15px; /* Անկյունների կլորացում */
+    text-align: center; /* Տեքստի կենտրոնացում */
+}
+
+/* Վերնագիր #homeend-ի համար */
+#homeend h2 {
+    font-size: 36px; /* Վերնագրի տառաչափ */
+    color: white; /* Վերնագրի գույնը սպիտակ */
+    margin-bottom: 20px;
+}
+
+/* Content div-ի ոճավորում */
+#homeend .content {
+ 
+    color: white; /* Սպիտակ տեքստ */
+  
+}
+
+/* #home4 բաժնի ոճավորում */
+#home4 {
+    background-color: #ffffff17;
+    margin: 20px 3%;
+    padding: 40px 20px;
+    border-radius: 15px;
+}
+
+/* Վերնագիրը վերևում */
+#home4 h2 {
+    text-align: center;
+    margin-bottom: 30px;
+	font-size: 36px;
+	color: white;
+}
+
+/* Հավասար լայնություններով div-ներ */
+#home4 .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#home4 .divofset h2,
+#home4 .divimpuls h2,
+#home4 .divleftsper h2,
+#home4 .divm6 h2,
+#home4 .divdiag h2,
+#home4 .divrightsper h2 {
+	margin: 20px;
+	color: black;
+    font-size: 25px;
+}
+#home4 .divofset p,
+#home4 .divimpuls p,
+#home4 .divleftsper p,
+#home4 .divdiag p,
+#home4 .divm6 p,
+#home4 .divrightsper p {
+	margin: 20px;
+	color: black;
+    font-size: 20px;
+}
+
+#home4 .divleftsper {
+margin-bottom: 20px;
+}
+/* Յուրաքանչյուր div-ի ֆոն */
+#home4 .divofset,
+#home4 .divimpuls,
+#home4 .divleftsper,
+#home4 .divm6,
+#home4 .divdiag,
+#home4 .divrightsper {
+    flex: 1;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Նկարների կոնտեյներ որպես ֆոն */
+#home4 .divofset .image-container {
+    width: 100%;
+    height: 200px;
+    background-image: url('images/mod-ofset.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px;
+	margin: 0px;
+}
+#home4 .divimpuls .image-container {
+    width: 100%;
+    height: 200px;
+    background-image: url('images/mod-impuls.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px;
+	margin: 0px;
+}
+#home4 .divleftsper .image-container {
+    width: 100%;
+    height: 300px;
+    background-image: url('images/mod-left.png');
+    background-size: contain; /* Նկարը ամբողջությամբ տեղավորվում է */
+    background-repeat: no-repeat; /* Կրկնության արգելք */
+    background-position: center;
+    border-radius: 0px;
+	margin: 0px;
+}
+
+#home4 .divrightsper .image-container {
+    width: 100%;
+    height: 300px;
+    background-image: url('images/mod-right.png');
+    background-size: contain; /* Նկարը ամբողջությամբ տեղավորվում է */
+    background-repeat: no-repeat; /* Կրկնության արգելք */
+    background-position: center;
+    border-radius: 0px;
+	margin: 0px;
+}
+
+#home4 .divm6 .image-container {
+    width: 100%;
+    height: 350px;
+    background-image: url('images/mod-m6.png');
+    background-size: contain; /* Նկարը ամբողջությամբ տեղավորվում է */
+    background-repeat: no-repeat; /* Կրկնության արգելք */
+    background-position: center;
+    border-radius: 0px;
+    margin: 0px;
+}
+
+#home4 .divdiag .image-container {
+    width: 100%;
+    height: 200px;
+    background-image: url('images/mod-diag.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px;
+	margin: 0px;
+}
+/* Մոբիլ տարբերակի համար */
+@media screen and (max-width: 768px) {
+    #home4 .content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Play button style */
+.play-button {
+    
+    top: 30%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    width: 20px;
+	
+	flex-direction: row;
+}
+
+.play-button img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Register button style */
+.register-button {
+    position: ;
+    top: 31%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: #ebba16;
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    animation: pulse 2s infinite;
+    width: 80px;
+	
+	flex-direction: row;
+}
+
+.register-button:hover {
+    background-color: #f1c40f; /* Ավելի մուգ դեղին hover-ի ժամանակ */
+}
+
+/* Animation for both buttons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Modal style */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 588px;
+    background-color: #0a2a50d1;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}

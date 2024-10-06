@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ֆիզիկայի Բաժին</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/logo-white.svg" alt="Akasha Logo" />
+        </a>
+    </div>
+    <nav>
+    <ul class="nav-links">
+        <li><a href="#about">Մեր մասին</a></li>
+        <li class="dropdown">
+            <a href="#research">Գիտություն</a>
+            <ul class="dropdown-content">
+                <li><a href="#research1">Հետազոտություններ</a></li>
+                <li><a href="#info">Ինֆորմացիա</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#services">Ծառայություններ</a>
+            <ul class="dropdown-content">
+                <li><a href="#kozyrev">Կոզյրևի հայելիներ</a></li>
+                <li><a href="#diagnostics">Դիակնոստիկա</a></li>
+            </ul>
+        </li>
+        <li><a href="#contact">Կապ</a></li>
+    </ul>
+    <div class="search-box">
+        <input type="text" placeholder="Որոնում..." />
+        <button><img src="images/search-icon.png" alt="Search Icon" /></button>
+    </div>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+</header>
+
+ <section id="home">
+    <div class="content">
+        <h2>Բարի գալուստ Ակաշա Գիտահետազոտական Կենտրոն</h2>
+        <p>Ակաշա գիտահետազոտական կենտրոնը ձգտում է բացահայտել տիեզերքի և կյանքի խորը գաղտնիքները՝ ուսումնասիրելով էներգիայի և ինֆորմացիայի 
+		փոխազդեցությունը, և դրանց ազդեցությունը մարդու մարմնի, մտքի և հոգու վրա։ Մեր կենտրոնի նպատակը ֆիզիկական և հոգևոր գիտությունների սինթեզն է՝ 
+		նորարարական և փորձարարական մեթոդների միջոցով։</p>
+    </div>
+</section>
+
+<section id="home2">
+    <h2>Ակաշա գիտահետազոտական կենտրոնը իրականացնում է խորքային հետազոտություններ հետևյալ ուղղություններով՝</h2>
+    <div class="content">
+        <div class="divleft">
+            <div class="image-container"></div>
+            <h2>Կոզյրևի հայելիների դաշտի ուսումնասիրություն</h2>
+            <p>Մենք ուսումնասիրում ենք Կոզերևի հայելիների ազդեցությունը մարդու ֆիզիկական վիճակի և մտավոր գործունեության վրա։</p>
+        </div>
+        <div class="divcenter">
+            <div class="image-container"></div>
+            <h2>Ջրի ինֆորմացիոն հատկությունների հետազոտություն</h2>
+            <p>Մեր գիտնականները ուսումնասիրում են, թե ինչպես են մարդու մտքերն ու զգացմունքները ազդում մարդու օրգանիզմում ջրի վրա։</p>
+        </div>
+        <div class="divright">
+            <div class="image-container"></div>
+            <h2>Քվանտային ֆիզիկա</h2>
+            <p>Ակաշա կենտրոնը ուսումնասիրում է քվանտային դաշտերը և դրանց ազդեցությունը ժամանակի և գիտակցության վրա։</p>
+        </div>
+    </div>
+</section>
+
+<section id="home4">
+    <h2>Ակաշա գիտահետազոտական կենտրոնը առաջարկում է հետևյալ ծառայությունները</h2>
+    <div class="content">
+       <div class="divofset">
+    <div class="image-container">
+        
+    </div>
+    <h2>Հորիզոնական Օֆսետային Կոզերևի հայելի</h2>
+    <p>Նպաստում են նյարդային լարվածության թուլացմանը, ուժերի վերականգնմանը, մկանային լարվածության կրճատմանը, արյան շրջանառության բարելավմանը, 
+        սրտի ռիթմի նորմալացմանը, ուղեղի ակտիվության կարգավորմանը, քնի վերականգնմանը և ակտիվացնում են ինքնակարգավորման մեխանիզմները՝ համընդհանուր 
+        հավասարակշռված ազդեցություն ունենալով ամբողջ օրգանիզմի վրա։</p>
+<!-- Նոր գրանցման կոճակ -->
+<div class="register-button" onclick="register()">
+    Գրանցվել
+</div>
+<!-- Play Button -->
+		<div class="play-button" onclick="openModal()">
+            <img src="images/play-button.svg" alt="Play Button">
+        </div>
+</div>
+
+<!-- Modal -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7y6i2o45f4Y?si=irVMGMqW2HmY0-ld" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+        <div class="divleftsper">
+            <div class="image-container"></div>
+            <h2>Աջակողմյա սպիրալաձև Կոզերևի հայելի</h2>
+            <p>Բարելավում են հիշողությունը, կենտրոնացումը և մտավոր գործունեությունը, խթանում են էքստրասենսոր ունակությունների զարգացումը, 
+			ավելացնում են նեյրոնային կապերի քանակը, նպաստում են գիտակցության ընդլայնմանը և տեղեկատվական կլաստերների հետ կապի ձևավորմանը՝ 
+			բարձրացնելով ուղեղի ակտիվությունը, տեղեկատվության մշակման արագությունն ու արդյունավետությունը։</p>
+        </div>
+        <div class="divrightsper">
+            <div class="image-container"></div>
+            <h2>Ձաղակողմյա սպիրալաձև Կոզերևի հայելի</h2>
+            <p>Նպաստում են կուտակված բացասական էներգիայի ազատմանը, հոգե-էմոցիոնալ լարվածության և հետ-տրավմատիկ սինդրոմների մեղմացմանը, 
+			խթանում են կապը երկրի էներգիայի հետ, արդյունավետորեն թուլացնում են մտավոր լարվածությունը, վերականգնում են ֆիզիկական և 
+			հոգե-էմոցիոնալ հավասարակշռությունը՝ հատկապես նրանց համար, ովքեր զբաղվում են հոգևոր պրակտիկայով։</p>
+        </div>
+    </div>
+	<div class="content">
+        <div class="divimpuls">
+            <div class="image-container"></div>
+            <h2>Հորիզոնական Իմպուլսային Կոզերևի հայելի</h2>
+            <p>Նպաստում են մկանային սպազմների վերացմանը, կապանների և ջլերի լարվածության թուլացմանը, մկանային շերտի վերականգնմանը, 
+			հիշողության և կենտրոնացման բարելավմանը, օրգանիզմի ադապտացիոն գործընթացների բարձրացմանը, կենտրոնական նյարդային համակարգի աշխատանքի 
+			ակտիվացմանը և ենթագիտակցության հետ գիտակցության կապի ուժեղացմանը՝ միաժամանակ ընդլայնելով նեյրոնային կապերն ու տեղեկատվության մշակումը։</p>
+        </div>
+        <div class="divm6">
+            <div class="image-container"></div>
+            <h2>Վեցանկյուն Կոզերևի հայելի</h2>
+            <p>Կարգավորում են օրգանիզմի ներքին ջրային միջավայրը, նպաստում են հեղուկների շրջանառության բարելավմանը, «ծանր» ջրի արտազատմանը 
+			և սինխրոնացնում է ֆունկցիոնալ համակարգերը, ապահովում են կենսաբանական էներգիայի հոսքերի համաչափ բաշխումը և նպաստում է 
+			արյան շրջանառության և լիմֆատիկ հոսքի բարելավմանը՝ միաժամանակ աջակցելով ստեղծագործական ներուժի բացահայտմանը։</p>
+        </div>
+        <div class="divdiag">
+            <div class="image-container"></div>
+            <h2>Դիագնոստիկա</h2>
+            <p>Հետազոտությունները թույլ են տալիս մոնիտորինգի միջոցով գնահատելու և գրանցելու՝ սրտանոթային և վեգետատիվ համակարգերի վիճակը, 
+			օրգանիզմի ներքին էներգետիկ ռեսուրսները, հոգե-էմոցիոնալ վիճակը, կենսաբանական տարիքը և այլ կարևոր տվյալներ։ </p>
+        </div>
+    </div>
+</section>
+
+ <section id="home3">
+    <div class="content">
+        <h2>Մեր Առաջնորդությունը դեպի Նորարարություն</h2>
+        <p>Մենք հավատում ենք, որ գիտության սահմաններն անվերջ են, և մեր հետազոտական կենտրոնը բաց է նորարարական մոտեցումներին, 
+		որոնք կմիավորեն գիտական և հոգևոր աշխարհի լավագույն մեթոդները։ Մեր թիմը աշխատում է գտնել այն պատասխանները, որոնք կօգնեն 
+		ձևավորել ապագան և զարգացնել մարդու ներուժը՝ հասնելու իր էության ամենաբարձր մակարդակներին։</p>
+    </div>
+</section>
+
+
+ <section id="homeend">
+    <div class="content">
+       <h2>Բարի գալուստ Ակաշա, որտեղ յուրաքանչյուր միտք և գաղափար մի նոր դուռ է բացում դեպի անսահմանություն։</h2>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-top">
+    
+        <div class="footer-menu">
+            <ul>
+                <li><a href="#about">Մեր մասին</a></li>
+                <li><a href="#research">Գիտություն</a></li>
+				<li><a href="#research1">Հետազոտություններ</a></li>
+                <li><a href="#info">Ինֆորմացիա</a></li>
+                <li><a href="#news">Ծառայություններ</a></li>
+				<li><a href="#kozyrev">Կոզյրևի հայելիներ</a></li>
+                <li><a href="#diagnostics">Դիակնոստիկա</a></li>
+                <li><a href="#contact">Կապ</a></li>
+            </ul>
+        </div>
+		<div class="footer-center"> </div>
+		
+		
+        <div class="footer-subscribe">
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="images/youtube-icon.png" alt="YouTube Icon" />
+            </a></br>
+			<a href="https://www.facebook.com" target="_blank">
+                <img src="images/facebook-icon.png" alt="Facebook Icon" />
+            </a></br>
+			<a href="https://www.instagram.com" target="_blank">
+                <img src="images/instagram-icon.png" alt="instagram Icon" />
+            </a>
+        </div>
+    </div>
+    <hr> <!-- Ուղիղ գիծ -->
+    <div class="footer-bottom">
+        <div class="footer-logo">
+            <img src="images/logo_black.png" alt="Akasha Logo">
+        </div>
+        <div class="footer-contact">
+            <p>Հեռ: +374 94151994</p>
+            <p>Հասցե: Azatutyan 14/2</p>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
